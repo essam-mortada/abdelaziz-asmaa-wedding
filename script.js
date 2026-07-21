@@ -117,17 +117,3 @@ document.querySelector("#addCalendar").addEventListener("click", () => {
   toast.classList.add("is-visible");
   window.setTimeout(() => toast.classList.remove("is-visible"), 2500);
 });
-
-const lightbox = document.querySelector("#lightbox");
-const lightboxImage = document.querySelector("#lightboxImage");
-document.querySelectorAll(".invite-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    lightboxImage.src = card.dataset.image;
-    lightbox.showModal();
-  });
-});
-
-document.querySelector(".lightbox__close").addEventListener("click", () => lightbox.close());
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) lightbox.close();
-});
