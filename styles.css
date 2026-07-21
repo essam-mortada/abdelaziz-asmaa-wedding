@@ -509,11 +509,20 @@ html:has(body.no-scroll) { overflow: hidden; }
 .detail-card svg { width: 29px; height: 29px; margin-bottom: 1.45rem; color: var(--gold); }
 .detail-card--featured svg { color: var(--gold-light); }
 .detail-card__number { font-family: var(--display); font-size: clamp(3rem, 6vw, 4.6rem); line-height: 1; }
+.detail-card__number--date { font-size: clamp(2.35rem, 5vw, 3.8rem); }
 .detail-card__number--small { font-size: clamp(2rem, 4vw, 3rem); }
 .detail-card h3 { margin: .7rem 0 .4rem; color: var(--gold); font-size: .82rem; letter-spacing: .13em; text-transform: uppercase; }
 .detail-card--featured h3 { color: var(--gold-light); }
 .detail-card p { max-width: 260px; margin: 0; color: var(--muted); font-size: .92rem; }
 .detail-card--featured p { color: rgba(255,255,255,.78); }
+.detail-card .detail-card__time { margin-top: .35rem; font-family: var(--display); font-size: clamp(1.45rem, 3.4vw, 2rem); line-height: 1.2; }
+.detail-card--featured .detail-card__time { color: #fff8ea; }
+.detail-card--arabic .detail-card__number,
+.detail-card--arabic h3,
+.detail-card--arabic .detail-card__time { font-family: var(--arabic); }
+.detail-card--arabic .detail-card__number { font-weight: 700; }
+.detail-card--arabic h3 { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
+.detail-card--arabic .detail-card__time { color: var(--oxblood); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; }
 .countdown-wrap { margin-top: clamp(4rem, 8vw, 7rem); text-align: center; }
 .countdown { display: flex; align-items: center; justify-content: center; gap: clamp(.6rem, 3vw, 2.5rem); margin-top: 2rem; }
 .countdown div { min-width: clamp(56px, 10vw, 110px); }
