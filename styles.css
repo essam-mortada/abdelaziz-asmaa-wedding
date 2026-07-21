@@ -218,6 +218,31 @@ html:has(body.no-scroll) { overflow: hidden; }
 .wedding-ring--plain { right: 10px; }
 .wedding-ring--diamond span { position: absolute; top: -13px; left: 15px; width: 11px; height: 11px; border: 1.5px solid var(--gold); background: var(--paper); transform: rotate(45deg); }
 .wedding-ring--diamond span::after { content: ""; position: absolute; inset: 2px; border: 1px solid rgba(157,116,53,.45); }
+.opening__verse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.55rem, 2vw, 1rem);
+  width: min(90%, 390px);
+  margin: .1rem 0 .25rem;
+  color: var(--oxblood);
+  font-family: var(--arabic);
+  font-size: clamp(1.05rem, 2.8vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.65;
+  text-shadow: 0 1px 14px rgba(157,116,53,.12);
+  animation: weddingTextIn 780ms ease-out 360ms both;
+  transition: opacity 280ms ease, transform 360ms ease;
+}
+.opening__verse::before,
+.opening__verse::after {
+  content: "";
+  width: clamp(28px, 8vw, 70px);
+  height: 1px;
+  flex: 0 1 70px;
+  background: linear-gradient(90deg, transparent, rgba(157,116,53,.72));
+}
+.opening__verse::after { transform: scaleX(-1); }
 .envelope {
   position: relative;
   width: min(84vw, 520px);
@@ -319,6 +344,7 @@ html:has(body.no-scroll) { overflow: hidden; }
 .opening.is-revealing .wax-seal { opacity: 0; transform: translate(-50%,-50%) scale(.45) rotate(-22deg); pointer-events: none; }
 .opening.is-revealing .opening__eyebrow,
 .opening.is-revealing .wedding-rings,
+.opening.is-revealing .opening__verse,
 .opening.is-revealing .opening__instruction { opacity: 0; animation: none; transition: opacity 280ms ease; }
 @keyframes envelopeArrive { from { opacity: 0; transform: translateY(34px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
 @keyframes weddingTextIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
