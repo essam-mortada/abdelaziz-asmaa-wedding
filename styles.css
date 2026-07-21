@@ -523,6 +523,32 @@ html:has(body.no-scroll) { overflow: hidden; }
 .detail-card--arabic .detail-card__number { font-weight: 700; }
 .detail-card--arabic h3 { font-size: 1.05rem; letter-spacing: 0; text-transform: none; }
 .detail-card--arabic .detail-card__time { color: var(--oxblood); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; }
+.detail-card__location {
+  position: relative;
+  z-index: 1;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: 1.25rem;
+  padding: .7rem 1.15rem;
+  color: #fff8ea;
+  background: var(--oxblood);
+  border: 1px solid var(--oxblood);
+  border-radius: 999px;
+  font-family: var(--arabic);
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(63,15,28,.14);
+  cursor: pointer;
+  transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+.detail-card__location b { font-family: var(--serif); font-size: .82rem; letter-spacing: .04em; }
+.detail-card__location:hover { background: var(--wine); box-shadow: 0 12px 26px rgba(63,15,28,.22); transform: translateY(-2px); }
+.detail-card__location:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 .countdown-wrap { margin-top: clamp(4rem, 8vw, 7rem); text-align: center; }
 .countdown { display: flex; align-items: center; justify-content: center; gap: clamp(.6rem, 3vw, 2.5rem); margin-top: 2rem; }
 .countdown div { min-width: clamp(56px, 10vw, 110px); }
