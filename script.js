@@ -87,33 +87,3 @@ function updateCountdown() {
 
 updateCountdown();
 window.setInterval(updateCountdown, 1000);
-
-const toast = document.querySelector("#toast");
-document.querySelector("#addCalendar").addEventListener("click", () => {
-  const calendar = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Abdelaziz and Asmaa//Wedding Invitation//EN",
-    "CALSCALE:GREGORIAN",
-    "BEGIN:VEVENT",
-    "UID:abdelaziz-asmaa-20260807@wedding",
-    "DTSTAMP:20260718T120000Z",
-    "DTSTART:20260807T160000Z",
-    "DTEND:20260807T210000Z",
-    "SUMMARY:Abdelaziz & Asmaa Wedding",
-    "LOCATION:Al Gawhara Hall\, Infantry Officers Club",
-    "DESCRIPTION:Wedding celebration of Abdelaziz and Asmaa.",
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].join("\r\n");
-  const url = URL.createObjectURL(new Blob([calendar], { type: "text/calendar;charset=utf-8" }));
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "Abdelaziz-and-Asmaa-Wedding.ics";
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-  toast.classList.add("is-visible");
-  window.setTimeout(() => toast.classList.remove("is-visible"), 2500);
-});

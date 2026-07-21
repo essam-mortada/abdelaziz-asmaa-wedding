@@ -580,9 +580,6 @@ html:has(body.no-scroll) { overflow: hidden; }
 footer { display: flex; justify-content: space-between; padding: 1.4rem max(1.5rem, calc((100vw - 1180px) / 2)); color: rgba(255,255,255,.74); background: var(--oxblood-deep); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
 footer p { margin: 0; }
 
-.toast { position: fixed; z-index: 500; left: 50%; bottom: 1.5rem; padding: .75rem 1rem; color: white; background: var(--oxblood-deep); box-shadow: var(--shadow); font-size: .85rem; transform: translate(-50%, 150%); opacity: 0; transition: transform 250ms ease, opacity 250ms ease; }
-.toast.is-visible { transform: translate(-50%, 0); opacity: 1; }
-
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
